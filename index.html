@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html class="no-js" ng-app='cleaver-app'>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/gridism.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src='js/build.js'></script>
+    </head>
+    <body class="grid" ng-controller='EditCtrl' ng-init='setTab(tabs[0])'>
+        <div class="unit half">
+            <nav-tabs></nav-tabs>
+            <textarea ng-model="$parent.models[tab]" ng-repeat='tab in tabs' ng-show='isActive(tab)' id="{{tab}}" cols="30" rows="10">
+            </textarea>
+            <menu>
+                <label>Constantly update (no need to use button):<input type="checkbox" ng-model='constantUpdate' value='false'></label><br>
+                <button ng-click='updateSlides()'>Update slides, c'mon.</button><br>
+                <button ng-click='savePresentation()'>Save to disk</button>
+            </menu>
+        </div>
+        <div class="unit half">
+            <iframe id='result' name="slidesPreview" src="about:blank" class="previewer-iframe" frameborder="0" width="100%" height="100%" scrolling="auto"></iframe>
+        </div>
+    </body>
+</html>

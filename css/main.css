@@ -1,0 +1,57 @@
+body > .unit:first-child {
+  border-left: 1px solid black;
+}
+
+html, body {
+  height: 100%;
+}
+
+body > div {
+  height: 100%;
+}
+
+nav {
+  list-style: none;
+}
+textarea {
+  width: 100%;
+  min-height: 50%;
+  max-height: 90%;
+}
+.nav-list {
+  width: 100%;
+}
+.nav-item {
+  display: inline-block;
+  padding: 5px;
+  border-radius: 5px 5px 0 0;
+  border: 1px solid black;
+  border-bottom: none;
+}
+
+.nav-item.active {
+  margin-bottom: -1px;
+  color: white;
+  background-color: black;
+}
+
+menu {
+  margin-top: 10px;
+  padding-left: 0px;
+}
+
+menu > * {
+  margin: 5px;
+}
+menu > label {
+  display: inline-block;
+}
+menu label {
+  font-size: 18px;
+  padding-left: 5px;
+}
+menu input {
+  width: 20px;
+  height: 20px;
+  vertical-align: bottom;
+}

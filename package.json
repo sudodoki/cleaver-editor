@@ -1,0 +1,24 @@
+{
+  "name": "cleaver-editor",
+  "version": "0.0.0",
+  "description": "In browser editor for cleaver slides",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node_modules/.bin/watchify js/src/main.js -o js/build.js -dv"
+  },
+  "keywords": [
+    "cleaver",
+    "slides",
+    "slideshow",
+    "editor"
+  ],
+  "author": "sudodoki",
+  "license": "MIT",
+  "devDependencies": {
+    "mustache": "~0.8.0",
+    "cleaver": "~0.5.5",
+    "angular": "~1.2.2",
+    "watchify": "~0.4.1"
+  }
+}
