@@ -29,8 +29,8 @@ app.controller('EditCtrl', function($scope, $element, cleaver){
     ifrm.document.write(html);
     ifrm.document.close();
   }
-  $scope.rerenderFrame('<h1>Your gorgeous presentation will appear here</h1>')
-  $scope.constantUpdate = false
+  $scope.updateSlides();
+  $scope.constantUpdate = true
   $scope.$watch('constantUpdate', function(newVal, oldVal){
     if (watchHandler) { watchHandler() }
     if (!newVal) { return }
@@ -107,8 +107,8 @@ app.service('cleaver', function() {
     if (obj.agenda) {cleaver.templates.loaded.agenda = obj.agenda}
     if (obj.slides_layout) {cleaver.templates.loaded.slides = obj.slides_layout}
     if (obj.style) {cleaver.resources.loaded.style = obj.style}
-    if (obj.style) {cleaver.resources.loaded.githubStyle = obj.githubStyle}
-    if (obj.style) {cleaver.resources.loaded.script = obj.script}
+    if (obj.githubStyle) {cleaver.resources.loaded.githubStyle = obj.githubStyle}
+    if (obj.script) {cleaver.resources.loaded.script = obj.script}
     cleaver.slides = []
     cleaver.renderSlides()
     return cleaver.renderSlideshow()
