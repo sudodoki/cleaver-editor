@@ -22,6 +22,11 @@ app.controller('EditCtrl', function($scope, $element, cleaver){
     var blob = new Blob([html], {type: "text/html;charset=utf-8"});
     saveAs(blob, "Presentation.html");
   }
+  $scope.saveOrigin = function() {
+    if (!$scope.models.slides) {return alert('nothing to save, lol')}
+    var blob = new Blob([$scope.models.slides], {type: "text/plain;charset=utf-8"});
+    saveAs(blob, "Presentation.md");
+  }
   $scope.rerenderFrame = function(html) {
     var ifrm = $element.find('iframe')[0];
     ifrm = (ifrm.contentWindow) ? ifrm.contentWindow : (ifrm.contentDocument.document) ? ifrm.contentDocument.document : ifrm.contentDocument;       
