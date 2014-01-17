@@ -3,7 +3,7 @@ cleaver-editor
 
 Single page editor for [cleaver](https://github.com/jdan/cleaver) slides in your browser. Open index.html, edit your slides, save presentation to disk.
 
-See it in action [over here](http://www.jscacourse.co.vu:4321/index.html) if I don't forget to maintain sandbox server.
+See it in action [over here](http://sudodoki.github.io/cleaver-editor/).
 
 This thing was made possible thanks to [browserify](https://github.com/substack/node-browserify).
 
